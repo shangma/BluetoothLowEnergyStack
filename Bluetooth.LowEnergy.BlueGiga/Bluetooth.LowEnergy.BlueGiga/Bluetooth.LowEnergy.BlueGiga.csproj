@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Identifier.cs" />
+    <Compile Include="Messages\AttributeClient\Base.cs" />
     <Compile Include="Messages\Command.cs" />
     <Compile Include="Messages\CommandWithResponse.cs" />
     <Compile Include="Messages\Event.cs" />
@@ -53,7 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Messages\AttributeClient\" />
     <Folder Include="Messages\AttributeDatabase\" />
     <Folder Include="Messages\Connection\" />
     <Folder Include="Messages\GenericAccessProfile\" />
