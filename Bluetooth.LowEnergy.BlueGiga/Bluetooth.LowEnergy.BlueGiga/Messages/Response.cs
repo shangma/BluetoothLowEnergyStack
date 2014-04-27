@@ -11,5 +11,14 @@
 			: base(MessageType.Response, classId, commandId)
 		{
 		}
+
+		/// <summary>
+		/// Sets the store.
+		/// </summary>
+		/// <param name="store">The store.</param>
+		public void SetStore(byte[] store)
+		{
+			Store = store;
+		}
 	}
 }

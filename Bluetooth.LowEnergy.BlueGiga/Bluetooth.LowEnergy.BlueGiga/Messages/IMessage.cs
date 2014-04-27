@@ -1,6 +1,8 @@
-﻿namespace Bluetooth.LowEnergy.BlueGiga.Messages
+﻿using Veldy.Net.CommandProcessor;
+
+namespace Bluetooth.LowEnergy.BlueGiga.Messages
 {
-	public interface IMessage
+	public interface IMessage : IMessage<Identifier, byte[]>
 	{
 		/// <summary>
 		/// Gets the type of the message.

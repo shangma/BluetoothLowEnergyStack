@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bluetooth.LowEnergy.BlueGiga</RootNamespace>
     <AssemblyName>Bluetooth.LowEnergy.BlueGiga</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,32 +38,38 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Veldy.Net.CommandProcessor">
+      <HintPath>..\packages\Veldy.Net.CommandProcessor.1.0.0.2\lib\net451\Veldy.Net.CommandProcessor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums.cs" />
     <Compile Include="Identifier.cs" />
     <Compile Include="Messages\AttributeClient\Base.cs" />
+    <Compile Include="Messages\AttributeDatabase\Base.cs" />
     <Compile Include="Messages\Command.cs" />
     <Compile Include="Messages\CommandWithResponse.cs" />
+    <Compile Include="Messages\Connection\Base.cs" />
     <Compile Include="Messages\Event.cs" />
+    <Compile Include="Messages\GenericAccessProfile\Base.cs" />
+    <Compile Include="Messages\Hardware\Base.cs" />
     <Compile Include="Messages\Header.cs" />
     <Compile Include="Messages\ICommand.cs" />
     <Compile Include="Messages\ICommandWithResponse.cs" />
     <Compile Include="Messages\IEvent.cs" />
     <Compile Include="Messages\IMessage.cs" />
     <Compile Include="Messages\IResponse.cs" />
+    <Compile Include="Messages\Key.cs" />
     <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\PersistentStore\Base.cs" />
     <Compile Include="Messages\Response.cs" />
+    <Compile Include="Messages\SecurityManager\Base.cs" />
+    <Compile Include="Messages\System\Base.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Messages\AttributeDatabase\" />
-    <Folder Include="Messages\Connection\" />
-    <Folder Include="Messages\GenericAccessProfile\" />
-    <Folder Include="Messages\Hardware\" />
-    <Folder Include="Messages\PersistantStore\" />
-    <Folder Include="Messages\SecurityManager\" />
-    <Folder Include="Messages\System\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

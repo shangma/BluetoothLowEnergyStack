@@ -1,8 +1,8 @@
-﻿using System.Linq.Expressions;
+﻿using Veldy.Net.CommandProcessor;
 
 namespace Bluetooth.LowEnergy.BlueGiga.Messages
 {
-	public interface ICommand : IMessage
+	public interface ICommand : IMessage, ICommand<Identifier, byte[]>
 	{
 	}
 }

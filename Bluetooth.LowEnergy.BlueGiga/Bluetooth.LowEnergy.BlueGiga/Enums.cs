@@ -32,7 +32,7 @@
 		/// <summary>
 		/// GAP functions
 		/// </summary>
-		GeneralAccessProfile = 0x06,
+		GenericAccessProfile = 0x06,
 		/// <summary>
 		/// Provides access to hardware such as timers and ADC
 		/// </summary>

@@ -33,8 +33,8 @@ namespace Bluetooth.LowEnergy.BlueGiga.UnitTests
 			Assert.IsTrue(header.TechnologyType == TechnologyType.Bluetooth_4_0_Single_Mode);
 			Assert.IsTrue(header.MessageType == MessageType.Event);
 
-			header.ClassId = ClassId.GeneralAccessProfile;
-			Assert.IsTrue(header.ClassId == ClassId.GeneralAccessProfile);
+			header.ClassId = ClassId.GenericAccessProfile;
+			Assert.IsTrue(header.ClassId == ClassId.GenericAccessProfile);
 			Assert.IsTrue(header.PayloadLength == payloadLength);
 			Assert.IsTrue(header.TechnologyType == TechnologyType.Bluetooth_4_0_Single_Mode);
 			Assert.IsTrue(header.MessageType == MessageType.Event);
