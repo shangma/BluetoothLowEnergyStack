@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Module Id="Deploy" Language="1033" Version="1.0.0.0">
+    <Package Id="A4D61B4F-75DA-4423-9DF4-E9E3C98188CB" Manufacturer="Veldy.net" InstallerVersion="200" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Component Id="Bluetooth.LowEnergy.BlueGiga" Guid="1571F4E4-3060-44F6-8179-F9DFA057625A">
+          <File Id="Bluetooth.LowEnergy.BlueGiga" Name="$(var.Bluetooth.LowEnergy.BlueGiga.TargetFileName)"
+                Source="$(var.Bluetooth.LowEnergy.BlueGiga.TargetPath)" DiskId="1" />
+        </Component>
+      </Directory>
+    </Directory>
+  </Module>
+</Wix>

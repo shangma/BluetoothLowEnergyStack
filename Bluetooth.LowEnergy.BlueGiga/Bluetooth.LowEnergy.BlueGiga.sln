@@ -7,20 +7,54 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluetooth.LowEnergy.BlueGig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluetooth.LowEnergy.BlueGiga.UnitTests", "Bluetooth.LowEnergy.BlueGiga.UnitTests\Bluetooth.LowEnergy.BlueGiga.UnitTests.csproj", "{6A14509A-1265-4CB1-9770-04F684625417}"
 EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Deploy", "Deploy\Deploy.wixproj", "{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD77CE95-1041-48D2-A4F6-DFA6F8030CE5}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy.bat = Deploy.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4C44C1CE-4C47-4236-BA3C-6FDD95E471BC}.Release|x86.ActiveCfg = Release|Any CPU
 		{6A14509A-1265-4CB1-9770-04F684625417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A14509A-1265-4CB1-9770-04F684625417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{6A14509A-1265-4CB1-9770-04F684625417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A14509A-1265-4CB1-9770-04F684625417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6A14509A-1265-4CB1-9770-04F684625417}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Debug|x86.ActiveCfg = Debug|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Debug|x86.Build.0 = Debug|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|Any CPU.ActiveCfg = Release|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|Any CPU.Build.0 = Release|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|Mixed Platforms.Build.0 = Release|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|x86.ActiveCfg = Release|x86
+		{8F3B6481-6770-4BDD-899C-52C71EE9A5CB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
