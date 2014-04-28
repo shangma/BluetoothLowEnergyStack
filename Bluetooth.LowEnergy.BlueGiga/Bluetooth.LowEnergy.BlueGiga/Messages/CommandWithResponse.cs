@@ -12,11 +12,5 @@
 			: base(classId, commandId)
 		{
 		}
-
-		/// <summary>
-		/// Gets the length of the response.
-		/// </summary>
-		/// <value>The length of the response.</value>
-		public virtual int ResponseLength { get { return 1; } }
 	}
 }

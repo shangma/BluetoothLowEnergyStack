@@ -141,6 +141,26 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages
 		}
 
 		/// <summary>
+		/// Gets the boolean from payload.
+		/// </summary>
+		/// <param name="payloadIndex">Index of the payload.</param>
+		/// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+		protected bool GetBooleanFromPayload(int payloadIndex)
+		{
+			return Store[Header.HeaderSize + payloadIndex] == 0x01;
+		}
+
+		/// <summary>
+		/// Sets the boolean in payload.
+		/// </summary>
+		/// <param name="payloadIndex">Index of the payload.</param>
+		/// <param name="value">if set to <c>true</c> [value].</param>
+		protected void SetBooleanInPayload(int payloadIndex, bool value)
+		{
+			Store[Header.HeaderSize + payloadIndex] = (byte) (value ? 0x01 : 0x00);
+		}
+
+		/// <summary>
 		/// Gets the byte from payload.
 		/// </summary>
 		/// <param name="payloadIndex">Index of the payload.</param>
@@ -182,6 +202,29 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages
 		}
 
 		/// <summary>
+		/// Gets the UUID from payload.
+		/// </summary>
+		/// <param name="payloadIndex">The payload index.</param>
+		/// <returns>Uuid.</returns>
+		protected Uuid GetUuidFromPayload(int payloadIndex)
+		{
+			if (payloadIndex < PayloadLength)
+				return (Uuid) GetUnsignedShortFromPayload(payloadIndex);
+
+			return null;
+		}
+
+		/// <summary>
+		/// Sets the UUID in payload.
+		/// </summary>
+		/// <param name="payloadIndex">The payload index.</param>
+		/// <param name="uuid">The UUID.</param>
+		protected void SetUuidInPayload(int payloadIndex, Uuid uuid)
+		{
+			SetUnsignedShortInPayload(payloadIndex, (ushort)uuid);
+		}
+
+		/// <summary>
 		/// Gets the tail byte array from payload.
 		/// </summary>
 		/// <param name="payloadIndex">Index of the payload.</param>
@@ -189,10 +232,15 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages
 		protected byte[] GetTailByteArrayFromPayload(int payloadIndex)
 		{
 			var arrayLength = PayloadLength - payloadIndex;
-			var array = new byte[arrayLength];
-			Buffer.BlockCopy(Store, Header.HeaderSize + payloadIndex, array, 0, arrayLength);
+			if (arrayLength > 0)
+			{
+				var array = new byte[arrayLength];
+				Buffer.BlockCopy(Store, Header.HeaderSize + payloadIndex, array, 0, arrayLength);
 
-			return array;
+				return array;
+			}
+
+			return null;
 		}
 
 		/// <summary>
