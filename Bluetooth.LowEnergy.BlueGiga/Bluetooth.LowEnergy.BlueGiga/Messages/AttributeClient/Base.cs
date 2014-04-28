@@ -12,6 +12,25 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages.AttributeClient
 			: base(ClassId.AttributeClient, commandId)
 		{
 		}
+
+		/// <summary>
+		/// Gets or sets the connection handle.
+		/// </summary>
+		/// <value>The connection handle.</value>
+		public byte ConnectionHandle
+		{
+			get { return GetByteFromPayload(0); }
+			set { SetByteFromPayload(0, value); }
+		}
+
+		/// <summary>
+		/// Gets the log text.
+		/// </summary>
+		/// <value>The log text.</value>
+		public override string LogText
+		{
+			get { return string.Format("{0} ConnectionHandle={1:X2}", base.LogText, ConnectionHandle); }
+		}
 	}
 
 	abstract class AttributeClientResponse : Response
@@ -23,6 +42,33 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages.AttributeClient
 		protected AttributeClientResponse(byte commandId) 
 			: base(ClassId.AttributeClient, commandId)
 		{
+		}
+
+		/// <summary>
+		/// Gets the connection handle.
+		/// </summary>
+		/// <value>The connection handle.</value>
+		public byte ConnectionHandle
+		{
+			get { return GetByteFromPayload(0); }
+		}
+
+		/// <summary>
+		/// Gets the result.
+		/// </summary>
+		/// <value>The result.</value>
+		public Result Result
+		{
+			get { return (Result) GetUnsignedShortFromPayload(1); }
+		}
+
+		/// <summary>
+		/// Gets the log text.
+		/// </summary>
+		/// <value>The log text.</value>
+		public override string LogText
+		{
+			get { return string.Format("{0} ConnectionHandle={1:X2} Result={2}", base.LogText, ConnectionHandle, Result); }
 		}
 	}
 
@@ -38,6 +84,25 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages.AttributeClient
 			: base(ClassId.AttributeClient, commandId)
 		{
 		}
+
+		/// <summary>
+		/// Gets or sets the connection handle.
+		/// </summary>
+		/// <value>The connection handle.</value>
+		public byte ConnectionHandle
+		{
+			get { return GetByteFromPayload(0); }
+			set { SetByteFromPayload(0, value); }
+		}
+
+		/// <summary>
+		/// Gets the log text.
+		/// </summary>
+		/// <value>The log text.</value>
+		public override string LogText
+		{
+			get { return string.Format("{0} ConnectionHandle={1:X2}", base.LogText, ConnectionHandle); }
+		}
 	}
 
 	abstract class AttributeClientEvent : Event
@@ -49,6 +114,25 @@ namespace Bluetooth.LowEnergy.BlueGiga.Messages.AttributeClient
 		protected AttributeClientEvent(byte commandId) 
 			: base(ClassId.AttributeClient, commandId)
 		{
+		}
+
+		/// <summary>
+		/// Gets or sets the connection handle.
+		/// </summary>
+		/// <value>The connection handle.</value>
+		public byte ConnectionHandle
+		{
+			get { return GetByteFromPayload(0); }
+			set { SetByteFromPayload(0, value); }
+		}
+
+		/// <summary>
+		/// Gets the log text.
+		/// </summary>
+		/// <value>The log text.</value>
+		public override string LogText
+		{
+			get { return string.Format("{0} ConnectionHandle={1:X2}", base.LogText, ConnectionHandle); }
 		}
 	}
 }
